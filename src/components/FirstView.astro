@@ -1,0 +1,191 @@
+---
+import background from '../assets/background.svg';
+import goqsystem from '../../public/images/logo-goqsystem.svg';
+import mainLogo from '../../public/images/php_hiroshima_transparent.png';
+---
+
+<div id="container" class="w-full max-w-[780px] mx-auto">
+	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<main>
+		<div class="h-[calc(100vh-72px)] flex flex-col items-center justify-center">
+			<img src={mainLogo.src} alt="phpカンファレンス広島のロゴ" class="mx-auto">
+			<p class="text-6xl font-bold text-[#07293f] text-center pt-14">
+				2025年10月 予定
+			</p>
+		</div>
+		<div style={{ fontFamily: 'Avenir-Roman, sans-serif' }} class="space-y-20">
+			<section id="news">
+				<h2 class="text-[#07293f] text-5xl font-black text-center pb-8">
+					News
+				</h2>
+				<ul class="space-y-2 max-w-[500px] mx-auto">
+					<li>
+						<span class="pr-4">yyyy/mm/dd</span>
+						<span>[ダミー]PHPカンファレンス広島　会場決定</span>
+					</li>
+					<li>
+						<span class="pr-4">yyyy/mm/dd</span>
+						<span>[ダミー]PHPカンファレンス広島　会場決定</span>
+					</li>
+					<li>
+						<span class="pr-4">yyyy/mm/dd</span>
+						<span>[ダミー]PHPカンファレンス広島　会場決定</span>
+					</li>
+				</ul>
+			</section>
+			<section id="sponsors">
+				<h2 class="text-[#07293f] text-5xl font-black text-center pb-12">
+					Sponsors
+				</h2>
+				<div class=" space-y-16">
+					<div>
+						<h3 class="relative text-[#6B7280] text-4xl font-black text-center before:w-full before:h-[1px] before:bg-[#6B728080] before:absolute before:-bottom-3 before:left-0">
+							Special Sponsor
+						</h3>
+						<ul class="pt-12">
+							<li class="max-w-[500px] w-full mx-auto py-4 px-20 border-[#6B728080] border-[1px] rounded-[8px]">
+								<img src={goqsystem.src} alt="">
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="relative text-[#6B7280] text-4xl font-black text-center before:w-full before:h-[1px] before:bg-[#6B728080] before:absolute before:-bottom-3 before:left-0">
+							Gold Sponsor
+						</h3>
+						<ul class="pt-12">
+							<li class="">
+								wanted...
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="relative text-[#6B7280] text-4xl font-black text-center before:w-full before:h-[1px] before:bg-[#6B728080] before:absolute before:-bottom-3 before:left-0">
+							Silver Sponsor
+						</h3>
+						<ul class="pt-12">
+							<li>
+								wanted...
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="staff">
+				<h2 class="text-[#07293f] text-5xl font-black text-center pb-8">
+					Staff
+				</h2>
+				<ul>
+					<li>
+						wanted...
+					</li>
+				</ul>
+			</section>
+		</div>
+	</main>
+</div>
+
+<style>
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(80px);
+	}
+
+	h1 {
+		font-size: 22px;
+		margin-top: 0.25em;
+	}
+
+	#links {
+		display: flex;
+		gap: 16px;
+	}
+
+	#links a {
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		color: #111827;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	#links a:hover {
+		color: rgb(78, 80, 86);
+	}
+
+	#links a svg {
+		height: 1em;
+		margin-left: 8px;
+	}
+
+	#links a.button {
+		color: white;
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+		border-radius: 10px;
+	}
+
+	#links a.button:hover {
+		color: rgb(230, 230, 230);
+		box-shadow: none;
+	}
+
+	pre {
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+			'DejaVu Sans Mono', monospace;
+		font-weight: normal;
+		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin: 0;
+	}
+
+	code {
+		display: inline-block;
+		background:
+			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		padding: 6px 8px;
+	}
+
+	.box {
+		padding: 16px;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 16px;
+		border: 1px solid white;
+	}
+
+	@media screen and (max-width: 768px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+
+		#links {
+			flex-wrap: wrap;
+		}
+
+		#links a.button {
+			padding: 14px 18px;
+		}
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+</style>
